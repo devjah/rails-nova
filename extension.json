@@ -1,0 +1,25 @@
+{
+  "identifier": "devjah.rails",
+  "name": "Ruby on Rails ERB tags",
+  "organization": "devjah",
+  "description": "Ruby on Rails ERB tags switcher",
+  "version": "1.0",
+  "categories": ["commands", "key-bindings"],
+
+  "main": "main.js",
+
+  "activationEvents": ["onLanguage:html"],
+
+  "entitlements": {},
+
+  "commands": {
+    "editor": [
+      {
+        "title": "Rails ERB tags",
+        "command": "devjah.erbtag",
+        "shortcut": "cmd-shift->",
+        "when": "editorHasFocus"
+      }
+    ]
+  }
+}
