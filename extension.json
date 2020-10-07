@@ -4,7 +4,10 @@
   "organization": "devjah",
   "description": "Ruby on Rails ERB tags switcher",
   "version": "1.0",
-  "categories": ["commands", "key-bindings"],
+  "categories": ["commands"],
+  
+  "repository": "https://github.com/devjah/rails-nova",
+  "bugs": "https://github.com/devjah/rails-nova/issues",
 
   "main": "main.js",
 
@@ -15,7 +18,7 @@
   "commands": {
     "editor": [
       {
-        "title": "Rails ERB tags",
+        "title": "Rails ERB tag switcher",
         "command": "devjah.erbtag",
         "shortcut": "cmd-shift->",
         "when": "editorHasFocus"
