@@ -1,3 +1,7 @@
+## Version 1.1.1
+
+- Fixes opening tag detection
+
 ## Version 1.1
 
 - Fixes multiple ERB tags on the same line

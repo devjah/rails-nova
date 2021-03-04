@@ -71,7 +71,7 @@ nova.commands.register("devjah.erbtag", async (editor) => {
       // console.log("selected text length: " + text.length);
       // console.log("textBeforeCursor: " + textBeforeCursor);
       
-      const openingTagsToTheLeft = (textBeforeCursor.match(/<%?./g) || [])
+      const openingTagsToTheLeft = (textBeforeCursor.match(/<%.?/g) || [])
       const openingTagsToTheLeftCount = openingTagsToTheLeft.length
       const lastOpeningTagBeforeCursor = openingTagsToTheLeft.pop()
       const closingTagsToTheLeftCount = (textBeforeCursor.match(/%>/g) || []).length
@@ -115,14 +115,14 @@ nova.commands.register("devjah.erbtag", async (editor) => {
         // todo has to know what "var text" to repalce
         // var new_text = text.replace(existingBrackets[0], bracketsToUse[0]);
         console.log(textBeforeCursor)
-        var fromLastagToCursor = (textBeforeCursor.match(/<%([^<%]*)$/) || [])[0]
-        console.log("fromLastagToCursor: "+fromLastagToCursor)
+        var fromLastTagToCursor = (textBeforeCursor.match(/<%([^<%]*)$/) || [])[0]
+        console.log("fromLastTagToCursor: "+fromLastTagToCursor)
         
-        if (fromLastagToCursor == undefined) {
+        if (fromLastTagToCursor == undefined) {
           console.log("ERB tags error")
           return
         }
-        last_tag_repacement = fromLastagToCursor.replace(existingBrackets[0].replace(' ',''), bracketsToUse[0].replace(' ',''))
+        last_tag_repacement = fromLastTagToCursor.replace(existingBrackets[0].replace(' ',''), bracketsToUse[0].replace(' ',''))
         var new_text = textBeforeCursor.replace(/<%([^<%]*)$/, last_tag_repacement) 
         // console.log(new_text)
         // console.log("new_text.length "+new_text.length)
