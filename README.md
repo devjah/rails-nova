@@ -4,5 +4,9 @@
 
 Select a text to wrap it in ERB tags or just use `⌘-shift->` to create a tag and start typing the expression
 
-# Demo
+# Demo gif:
 ![](https://raw.githubusercontent.com/devjah/rails-nova/main/Images/demo.gif)
+
+---
+
+Have any suggestions? Say hi to [devjah](https://devjah.com)
